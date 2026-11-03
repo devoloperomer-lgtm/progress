@@ -5,6 +5,17 @@ class Workoutpage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Colors.grey);
+    return Scaffold(
+      appBar: AppBar(title: Text("Work out page")),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/w.png"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Center(child: Text("hello")),
+      ),
+    );
   }
 }
