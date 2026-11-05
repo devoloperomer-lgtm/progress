@@ -1,14 +1,31 @@
+import 'package:daily_task/taskframe/pop.dart';
 import 'package:daily_task/taskframe/tasksketch.dart';
 import 'package:flutter/material.dart';
 
-class Todopage extends StatelessWidget {
+class Todopage extends StatefulWidget {
   const Todopage({super.key});
+
+  @override
+  State<Todopage> createState() => _TodopageState();
+}
+
+class _TodopageState extends State<Todopage> {
+  void dailog() {
+    setState(() {
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return Pop();
+        },
+      );
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: dailog,
         child: Icon(Icons.add),
       ),
       body: Container(
